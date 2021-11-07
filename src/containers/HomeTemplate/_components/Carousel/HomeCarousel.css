@@ -1,0 +1,9 @@
+.slick-dots-bottom {
+  margin: 0 !important;
+  padding: 0 !important;
+  bottom: 40px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 0px !important;
+}

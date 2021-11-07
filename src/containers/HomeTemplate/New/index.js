@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function AboutPage() {
+export default function New() {
     return (
         <div>
-            <h3>AboutPage</h3>
+            New
         </div>
     )
 }

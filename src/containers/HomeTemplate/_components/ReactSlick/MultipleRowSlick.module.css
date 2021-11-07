@@ -1,0 +1,20 @@
+.slick-prev:before,
+.slick-next:before {
+  color: gray !important;
+  font-size: 3rem !important;
+}
+
+.width-item {
+  width: 50% !important;
+}
+.active_Film {
+  color: #fff !important;
+  background-color: #343a40 !important;
+  border-color: #343a40 !important;
+}
+
+.none_active_Film {
+  color: #212529 !important;
+  background-color: #f8f9fa !important;
+  border-color: #f8f9fa !important;
+}

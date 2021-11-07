@@ -1,16 +1,37 @@
 import "./App.css";
+
+import PageNotFound from "./containers/PageNotFound";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { routerHome, routerCheckout, routerUser } from "./routes";
 import { createBrowserHistory } from "history";
-import { Router } from "react-router";
-import { HomeTemplate } from "./containers/HomeTemplate";
-import Home from "./containers/HomeTemplate/HomePage";
+import Loading from "./containers/Loading/Loading";
 
 export const history = createBrowserHistory();
-
 function App() {
+  const renderLayoutHome = (routes) => {
+    return routes?.map((item, index) => {
+      return (
+        <Route
+          history={history}
+          key={index}
+          exact={item.exact}
+          path={item.path}
+          component={item.component}
+        />
+      );
+    });
+  };
+
   return (
-    <Router history={history}>
-      <HomeTemplate path="/" exact Component={Home} />
-    </Router>
+    <BrowserRouter>
+      <Loading />
+      <Switch>
+        {renderLayoutHome(routerHome)}
+        {renderLayoutHome(routerUser)}
+        {renderLayoutHome(routerCheckout)}
+        <Route path="" component={PageNotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

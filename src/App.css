@@ -28,6 +28,16 @@
   color: #61dafb;
 }
 
+.login,
+.image {
+  min-height: 100vh;
+}
+.bg-image {
+  background-image: url("https://therichpost.com/wp-content/uploads/2021/02/login-split.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
